@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.streetfighter.MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/game_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="@dimen/large_text"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/pad"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:layout_below="@id/game_name"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/reset"
+        android:background="@color/colorPrimary"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player1"
+                android:textSize="@dimen/large_text"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/player_one_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/initial_score"
+                android:textSize="@dimen/large_text"
+                android:layout_gravity="center"
+                />
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="@string/one_point"
+                android:textSize="@dimen/standard_text"
+                android:onClick="addOneForPlayerOne"
+            />
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="@string/two_points"
+                android:textSize="@dimen/standard_text"
+                android:onClick="addTwoForPlayerOne"
+                />
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="@string/three_points"
+                android:textSize="@dimen/standard_text"
+                android:onClick="addThreeForPlayerOne"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player2"
+                android:textSize="@dimen/large_text"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/player_two_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/initial_score"
+                android:textSize="@dimen/large_text"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="@string/one_point"
+                android:textSize="@dimen/standard_text"
+                android:onClick="addOneForPlayerTwo"
+                />
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="@string/two_points"
+                android:textSize="@dimen/standard_text"
+                android:onClick="addTwoForPlayerTwo"
+                />
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="@string/three_points"
+                android:textSize="@dimen/standard_text"
+                android:onClick="addThreeForPlayerTwo"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/standard_text"
+        android:onClick="reset"
+        />
+</RelativeLayout>
