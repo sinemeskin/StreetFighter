@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Street Fighter</string>
+    <string name="reset">Reset</string>
+    <string name="player1">Ken</string>
+    <string name="player2">Ryu</string>
+    <string name="one_point">Punch +1</string>
+    <string name="two_points">KIck +2</string>
+    <string name="three_points">Hadouken +3</string>
+    <string name="initial_score">0</string>
+    <string name="title">fIght!</string>
+
+</resources>
